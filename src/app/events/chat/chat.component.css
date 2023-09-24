@@ -1,0 +1,37 @@
+.message{
+    border-radius: 50px;
+    margin: 0 15px 20px;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 15px;
+}
+.message.to{
+    background-color:rgba(1, 73, 1, 0.808);
+    color: white;
+    margin-left: 340px;
+    text-align: right;
+    width: 200px;
+}
+.message.from{
+    background-color: #1f1e1e;
+    color:rgb(252, 252, 252);
+    width: 250px;
+    text-align: left;
+    margin-right: 10px;
+}
+.message.to + .message.to,
+.message.from +.message.from{
+    margin-top: -10px;
+
+}
+#input{
+    width: 50%;
+}
+.all{
+    display: flex;
+}
+.container{
+    width: 50%;
+    border: 3px solid rgb(255, 254, 254);
+    background-color: rgba(96, 133, 96, 0.281);
+}

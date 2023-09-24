@@ -1,0 +1,23 @@
+
+<app-header></app-header>
+<h1 class="text-center">Adrenex <span style="color: #f9004d;"> AI Bot </span></h1>
+
+
+<div class="container">
+    <div class="col-md-12 text-center">
+        <ng-container *ngFor="let message of messages">
+            <div class="message" [ngClass]="{'from':message.author==='bot','to':message.author==='user'}">
+                {{message.content}}
+
+            </div>
+        </ng-container>
+    </div>
+    <div class="col-md-12 text-center p-4">
+        <label *ngIf="messages.length==0;" for="nameField"> </label>
+        <div class="all">         <i (click)="sendMessage()" class="fa-sharp fa-solid fa-share" style="color: #0c3808; font-size: xx-large;"></i>
+        <input  [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text" class="form-control" id="input" placeholder="message here....">
+
+    </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,54 @@
+
+<app-header></app-header>
+<br><br>
+
+ <!-- contact section -->
+ <h2 class="text-center">
+    Feedback
+  </h2>
+  
+ <section class="contact_section layout_padding">
+    <div class="container ">
+      <div class="heading_container">
+       
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form  [formGroup]="contactForm" (ngSubmit)="contact()">
+            <div>
+              <input type="text" name="name" formControlName="name" placeholder="Name" />
+            </div>
+            <div>
+              <input type="email" name="email" formControlName="email" placeholder="Email" />
+            </div>
+            <div>
+              <input type="text" name="message" formControlName="message"  class="message-box" placeholder="Message" />
+            </div>
+            <div class="d-flex ">
+              <button>
+                SEND
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br>
+  <!-- end contact section -->
+
+
+
+
+
+
+<app-footer></app-footer>

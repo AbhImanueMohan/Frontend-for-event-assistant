@@ -1,0 +1,148 @@
+<app-header></app-header>
+
+  <div class="hero_area">
+    <!-- slider section -->
+    <section class=" slider_section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="detail_box">
+              <h1>
+                Event <br>
+               Management
+              </h1>
+              <p>
+                is a homegrown business company delivering
+                exceptional creativity and services to our Clients. India’s leading full-service event company offers
+                professional planning and event management services for all your event needs.              </p>
+              <a routerLink="contact" class="">
+                Contact Us
+            </a>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 offset-lg-1">
+            <div class="img_content">
+              <div class="img_container">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="img-box">
+                        <img src="https://d2j6dbq0eux0bg.cloudfront.net/images/18059755/1243368518.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Events
+        </h2>
+        <img src="" alt="">
+      </div>
+
+      <div class="service_container">
+        <div class="box" *ngFor="let events of allEvents"  routerLink="view-event/{{events.id}}">
+          <div class="img-box">
+            <img  [src]="events.image3" class="img1" alt="">
+          </div>
+          <div class="detail-box" >
+            <h5>
+              {{events.title}}
+            </h5>
+            <p>
+              Rating : {{events.rating}}
+            </p>
+            <p>
+              Price : {{events.price}}
+            </p>
+
+          </div>
+        </div>
+         </div>
+      </div>
+  </section>
+  <!-- end service section -->
+
+  <!-- about section -->
+  <h1 class="text-center" style="font-weight: 700;">
+    About Us
+  </h1>
+  <section class="about_section layout_padding">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+             
+              <img src="" alt="">
+            </div>
+            <h4 class="head0">Adrenex Event Assistant</h4>
+            <p class="text0"> Our <span style="font-weight: 700;">Adrenex</span> is a homegrown business company delivering
+              exceptional creativity and services to our Clients. India’s leading full-service event company offers
+              professional planning and event management services for all your event needs.
+              With this unended journey, simultaneously we have collected a lot of experience and constantly upgraded our
+              strengths in all areas of event execution
+              and event management. With its wings spread across all major cities
+              of the country to take care of the local co-ordination and management. With this
+              unended journey, simultaneously we have collected a lot of experience and constantly
+              upgraded our strengths in all areas of event execution and event management.</p>
+            <div class="collapse" id="collapseExample">
+              <div>
+                <p style="text-align: justify;">
+                  With a team of
+                  young, creative, dynamic & dedicated professionals, we have pushed all areas of event management to
+                  new frontiers, whether it is artist management, product launch, Exhibition, Road-show, Fashion show,
+                  wedding planning & celebrity management. The urge to deliver more than the client’s expectations has always
+                  been our top priority. Hence, we are a “One stop shop” for any and every requirement to our wide spectrum of
+                  clients.
+                  Always our motto is to satisfy our clients in terms of providing the best services in competitive rates. For
+                  more info visit www.conceptmakerz.com</p>
+              </div>
+            </div>
+      
+            <button (click)="collapse()" class="btn1 btn border-success " data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" style="margin-left: 170px;">Read
+              <span *ngIf="isCollapse">More</span>
+              <span *ngIf="!isCollapse">Less</span></button>
+      
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img_container">
+            <div class="img-box b1">
+              <img src="https://wallpapercave.com/wp/wp7488230.jpg" alt="" />
+            </div>
+            <div class="img-box b2">
+              <img src="https://wallpapercave.com/wp/wp4459926.jpg" alt="" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+ 
+
+
+ <app-footer></app-footer>

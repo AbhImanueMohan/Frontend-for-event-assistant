@@ -1,0 +1,111 @@
+<div class="background-wrap">
+
+    
+    <div class="background"></div>
+  </div>
+  
+  <form id="accesspanel" action="login" method="post"  [formGroup]="bookForm" (ngSubmit)="booking()">
+    <h1 id="litheader">Book Now</h1>
+    <div class="row">
+        <div class="col-6">
+            <div class="inset">
+                <p>
+                  <input type="text" name="uname" formControlName="uname"  id="email" placeholder="Username">
+                </p><br><br>
+                <p>
+                  <input type="text" name="phone" formControlName="phone"  id="password" placeholder="Phone Number">
+                </p>
+                <div style="text-align: center;">
+                  
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-6">
+            <div class="inset">
+                <p>
+                  <input type="text" name="address"  formControlName="address" id="email" placeholder="Adress">
+                </p><br><br>
+                <p>
+                  <input type="date" name="date" formControlName="date"   id="date">
+                </p>
+                <div style="text-align: center;">
+                 
+                </div>
+                
+              </div>
+              </div>
+
+        </div>
+        <div class="inset " id="inset">
+            <p>
+                <select name="event" formControlName="event"  id="drop" >
+                    <option class="opt" value="event">Event</option>
+                    <option class="opt" value="weddinghindhu">Hindhu Wedding</option>
+                    <option class="opt" value="weddingmuslim">Muslim Wedding</option>
+                    <option class="opt" value="weddingchristian">Christian Wedding</option>
+                    <option class="opt" value="babyshowering">Baby Showering</option>
+                    <option class="opt" value="housewarming">House Warming</option>
+                    <option class="opt" value="ceremony">Ceremony</option>
+                    <option  class="opt" value="anniversery">Wedding Anniversay</option>
+                    <option class="opt" value="award">Award Events</option>
+                    
+                  </select>
+            </p>
+            </div>
+        
+        <div class="checkboxouter">
+            <input type="checkbox" name="rememberme" id="remember" value="Remember">
+            <label class="checkbox"></label>
+          </div>
+
+          <label for="remember">Remember me for 14 days</label>
+    
+
+    <p class="p-container text-center">
+      <input type="submit" name="Login" id="go" value="Book ">
+    </p>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function() {
+
+var state = false;
+
+//$("input:text:visible:first").focus();
+
+$('#accesspanel').on('submit', function(e) {
+
+    e.preventDefault();
+
+    state = !state;
+
+    if (state) {
+        document.getElementById("litheader").className = "poweron";
+        document.getElementById("go").className = "";
+        document.getElementById("go").value = "Initializing...";
+    }else{
+        document.getElementById("litheader").className = "";
+        document.getElementById("go").className = "denied";
+        document.getElementById("go").value = "Access Denied";
+    }
+
+});
+
+});
+  </script>

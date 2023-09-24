@@ -1,0 +1,41 @@
+<div class="container">
+   
+	<div class="screen">
+		<div class="screen__content">
+            <h1 class="text-center" id="head">Login </h1>
+			<form class="login"  [formGroup]="loginForm" (ngSubmit)="login()">
+				<div class="login__field">
+					<input name="email" formControlName="email" type="text" class="login__input" placeholder=" Email">
+				</div>
+				<div class="login__field">
+					<input name="pswd" formControlName="pswd" type="password" class="login__input" placeholder="Password">
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Log In Now</span>
+				
+				</button>		
+				<div class="text-center"> 
+					<a routerLink="register" style="text-decoration: none; font-weight: 700; color: azure;"> Register Here...</a>
+	
+				</div>		
+			</form>
+           
+			<div class="social-login">
+				<h5>log in via</h5>
+				<div class="social-icons">
+				<img width="30" height="30" src="https://homeinthefingerlakes.com/wp-content/uploads/2017/03/instagram-Logo-PNG-Transparent-Background-download.png" alt="">
+				<img width="30" height="30" src="https://th.bing.com/th/id/R.39a1d68aec01e3a9ce7c0ad7b9a9c6b2?rik=oQTpDpcTmfQpQg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ffacebook-logo-png-image-2335-1403.png&ehk=A6gzMacsllFktQ3DwgKCwXCKBhdJNlpCydh%2bXl3VABQ%3d&risl=&pid=ImgRaw&r=0" alt="">
+                <img width="30" height="30" src="https://th.bing.com/th/id/R.3d74e8bfd4ef7985f7529bb9f7650eca?rik=RCvdo0dDvjxCWg&riu=http%3a%2f%2fwww.stickpng.com%2fassets%2fimages%2f580b57fcd9996e24bc43c53e.png&ehk=%2fkYf7%2bIY6TUkpUQzwclpivMLQ8ynEgcZYehDGOzbu0E%3d&risl=&pid=ImgRaw&r=0" alt="">				</div>
+			</div>
+           
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>	
+        
+       
+	</div>
+</div>
